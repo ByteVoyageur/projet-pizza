@@ -1,0 +1,98 @@
+// Sushi.scss
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap');
+
+// 适用于屏幕显示的样式
+.sushi-menu {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: auto;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.25rem;
+
+  .menu-title {
+    color: #ffa500;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  .menu-subtitle {
+    color: #ffa500;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .menu-horaires {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  .menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px; // 调整行间距
+      border-bottom: 1px solid #ffa500;
+
+      .item-number {
+        color: #ffa500;
+        margin-right: 20px;
+        white-space: nowrap;
+        font-size: 1.25rem; // 统一字体大小
+      }
+
+      .item-name {
+        font-weight: bold;
+        flex-grow: 1;
+        margin-right: 20px;
+        font-size: 1.25rem; // 统一字体大小
+      }
+
+      .item-price {
+        color: #ffa500;
+        white-space: nowrap;
+        font-size: 1.25rem; // 统一字体大小
+      }
+    }
+  }
+}
+
+// 打印样式
+@media print {
+  .sushi-menu {
+    border-radius: 0;
+    max-width: 100%;
+    font-size: 12pt; // 增大字体大小以适应A4纸张
+    padding: 1in; // 增加边距以符合常见的打印页边距
+
+    .menu-title {
+      font-size: 14pt;
+    }
+
+    .menu-list {
+      .menu-item {
+        page-break-inside: avoid; // 防止菜单项在分页时被拆分
+        font-size: 12pt;
+
+        .item-number,
+        .item-name,
+        .item-price {
+          font-size: 12pt;
+        }
+      }
+    }
+  }
+}

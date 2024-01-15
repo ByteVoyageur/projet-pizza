@@ -1,0 +1,20 @@
+// Footer.scss
+.footer {
+  width: 100%;
+  background-color: #333; // 您要求的深灰色背景
+  color: #ffffff; // 文本颜色保持为白色
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  &__content {
+    font-size: 0.875rem;
+    margin-top: 20px;
+  }
+
+  &__logo {
+    fill: #ffffff; // 确保SVG logo的颜色为白色
+    max-width: 120px;
+    height: auto;
+  }
+}

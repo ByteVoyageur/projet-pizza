@@ -1,0 +1,143 @@
+// HomePage.scss
+
+.main-content {
+  padding: 0;
+  margin: 0;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: url('../assets/img/pizza-slice.jpg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(51, 51, 51, 0.7); // 深灰色半透明遮罩层
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__hero {
+    background-color: #ebc0702b;
+    padding: 3rem;
+    text-align: center;
+    width: 100%;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #ffa500;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #ffa500;
+    }
+  }
+
+  &__offer {
+    // Since the background image is now part of the homepage,
+    // we don't need specific styles for the background here.
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+  .offer-content {
+    // 添加一个微妙的阴影效果
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    // 电话号码特别样式
+    .phone-number {
+      display: block; // 使电话号码单独一行显示
+      background-color: #ffa500; // 使用主题色
+      color: #333; // 深灰色字体以获得对比
+      padding: 0.5rem 1rem;
+      border-radius: 4px; // 轻微的圆角边缘
+      margin: 1rem 0; // 添加一些外边距
+      font-weight: bold; // 字体加粗
+      font-size: 1.2rem; // 增大字体大小
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ffbf00; // 鼠标悬停时改变颜色
+      }
+    }
+
+    // 增加电话图标
+    .phone-icon {
+      display: inline-block;
+      margin-right: 0.5rem;
+      // 如果你有电话图标，可以在这里添加背景图
+    }
+  }
+
+  // 响应式设计
+  @media (max-width: 768px) {
+    .homepage__offer .offer-content {
+      padding: 1rem;
+      margin: 1rem;
+
+      .phone-number {
+        font-size: 1.5rem; // 在小屏幕上进一步增大字体
+      }
+    }
+  }
+  // 响应式设计
+  @media (max-width: 768px) {
+    .homepage {
+      background: none; // 可以根据需要在移动设备上移除背景图
+
+      &::before {
+        background: rgba(
+          51,
+          51,
+          51,
+          0.9
+        ); // 在移动设备上可能需要更深的遮罩以提高可读性
+      }
+    }
+
+    .homepage__hero,
+    .homepage__offer {
+      padding: 1rem;
+      text-align: center;
+
+      h1,
+      h2 {
+        font-size: 1.5rem; // 缩小标题字体大小
+      }
+
+      p {
+        font-size: 1rem; // 缩小段落字体大小
+      }
+    }
+
+    .homepage__offer .offer-content {
+      padding: 1rem;
+      margin: 1rem;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "EB Garamond", serif;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.Routes {
+  width: 100%;
+}
