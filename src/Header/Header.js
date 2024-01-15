@@ -1,3 +1,4 @@
+// Header.js
 import React from 'react'
 import './Header.scss'
 import { Link } from 'react-router-dom'
@@ -10,7 +11,7 @@ const Header = () => {
       <nav className='header__nav'>
         <ul>
           <li>
-            <Link to='/'>Home</Link> {/* Home link */}
+            <Link to='/'>Acceuil</Link> {/* Home link */}
           </li>
           <li>
             <Link to='/menu'>Menu</Link> {/* Link to the Menu page */}
@@ -18,10 +19,8 @@ const Header = () => {
           <li>
             <Link to='/about'>Panier</Link>{' '}
             {/* Assuming this is another page */}
-          </li>{' '}
-          {/* This closing tag was missing */}
-        </ul>{' '}
-        {/* This closing tag was missing */}
+          </li>
+        </ul>
       </nav>
     </header>
   )
