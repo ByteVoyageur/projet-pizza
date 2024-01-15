@@ -5,7 +5,8 @@ import './App.scss'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import HomePage from './HomePage/HomePage'
-import Menu from './Menu/Menu' // 假设您有一个 Menu 组件
+import Menu from './Menu/Menu'
+import Sushi from './Sushi/Sushi'
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
         <div className='main-content'>
           <Routes>
             <Route path='/' element={<HomePage />} />
-            <Route path='/menu' element={<Menu />} /> {/* 添加 Menu 路由 */}
-            {/* 可以继续添加更多的路由 */}
+            <Route path='/menu' element={<Menu />} />
+            <Route path='/sushi' element={<Sushi />} />
           </Routes>
         </div>
         <Footer />

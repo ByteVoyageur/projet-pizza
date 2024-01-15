@@ -1,24 +1,50 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap");
 .menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #333;
+  color: #fff;
   padding: 20px;
+  margin: auto;
+  font-family: "EB Garamond", serif;
+  font-size: 1.25rem;
 }
-.menu .menu-item {
-  border: 1px solid #ddd;
+.menu .menu-header {
+  color: #ffa500;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.menu .menu-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.menu .menu-items .menu-item {
+  border-bottom: 2px solid #ffa500;
+  padding: 10px 0;
   margin-bottom: 20px;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.menu .menu-item:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+.menu .menu-items .menu-item .item-name {
+  color: #ffa500;
+  font-weight: bold;
+  flex-grow: 1;
+  font-size: 1.25rem;
 }
-.menu .menu-item h3 {
-  margin-top: 0;
-  color: #333;
+.menu .menu-items .menu-item .item-description {
+  flex-grow: 2;
+  margin: 0 20px;
+  color: #fff;
 }
-.menu .menu-item p {
-  color: #666;
+.menu .menu-items .menu-item .item-price {
+  color: #ffa500;
+  white-space: nowrap;
+  font-size: 1.25rem;
+}
+.menu .menu-items .menu-item .item-price:before {
+  content: "€";
+  margin-right: 5px;
 }

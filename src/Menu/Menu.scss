@@ -1,28 +1,57 @@
+// Menu.scss
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap');
+
 .menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #333;
+  color: #fff;
   padding: 20px;
+  margin: auto;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.25rem;
 
-  .menu-item {
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
+  .menu-header {
+    color: #ffa500;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 2rem;
+  }
 
-    &:hover {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    }
+  .menu-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 
-    h3 {
-      margin-top: 0;
-      color: #333;
-    }
+    .menu-item {
+      border-bottom: 2px solid #ffa500; // 橙色分割线
+      padding: 10px 0; // 在分割线上下添加一些空间
+      margin-bottom: 20px; // 调整菜单项之间的间距
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-    p {
-      color: #666;
+      .item-name {
+        color: #ffa500; // 设定文本颜色为橙色
+        font-weight: bold;
+        flex-grow: 1;
+        font-size: 1.25rem; // 统一字体大小
+      }
+
+      .item-description {
+        flex-grow: 2;
+        margin: 0 20px; // 如果需要，可以调整间距
+        color: #fff; // 设定描述文本颜色为白色
+      }
+
+      .item-price {
+        color: #ffa500; // 设定价格颜色为橙色
+        white-space: nowrap;
+        font-size: 1.25rem; // 统一字体大小
+        &:before {
+          content: '€'; // 在价格前加上欧元符号
+          margin-right: 5px; // 在欧元符号和价格数字之间添加一些空间
+        }
+      }
     }
   }
 }

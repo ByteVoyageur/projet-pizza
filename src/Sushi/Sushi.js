@@ -36,7 +36,6 @@ const Sushi = () => {
 
   return (
     <div className='sushi-menu'>
-      <h1 className='menu-title'>La Flambée Italienne</h1>
       <h2 className='menu-subtitle'>Menu des sushis et nems</h2>
       <h3 className='menu-horaires'>
         (Disponible uniquement le samedi soir, réservation préalable requise.)
